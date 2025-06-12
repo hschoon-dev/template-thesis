@@ -1,0 +1,42 @@
+%%%%%%%%Inhaltsverzeichnis%%%%%Inhaltsverzeichnis%%%%%%%%
+\begin{spacing}{1}
+%\pagenumbering{Roman}
+%\setcounter{page}{1}
+\tableofcontents
+\end{spacing}
+\newpage
+
+%%%%%%%%Abbildungsverzeichnis%%%%%Abbildungsverzeichnis%%%%%%%%
+\begin{spacing}{1}
+%\section*{List of figures} 
+\addcontentsline{toc}{section}{Abbildungsverzeichnis}
+%\renewcommand{\listfigurename}{}
+\listoffigures
+\addcontentsline{toc}{section}{Quelltextauszüge}
+\renewcommand*{\lstlistlistingname}{Quelltextauszüge}
+\lstlistoflistings
+\end{spacing}
+%\newpage
+
+%%%%%%%%Tabellenverzeichnis%%%%%Tabellenverzeichnis%%%%%%%%
+%\section*{List of tables} 
+\addcontentsline{toc}{section}{Tabellenverzeichnis} 
+%\renewcommand{\listtablename}{}
+\listoftables
+\newpage
+
+%%%%%%%%Abkürzungsverzeichnis%%%%%Abkürzungsverzeichnis%%%%%%%%
+\section*{Abkürzungsverzeichnis} 
+\addcontentsline{toc}{section}{Abkürzungsverzeichnis}
+
+\begin{acronym}[OPC UA]
+\acro{opcua}[OPC UA]{Open Platform Communications Unified Architecture}
+\end{acronym}
+
+
+
+\newpage
+
+\clearpage
+\setcounter{SeitenzahlSpeicher}{\value{page}}
+\pagenumbering{arabic}
