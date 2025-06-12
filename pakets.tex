@@ -1,0 +1,126 @@
+\usepackage{geometry}
+\geometry{
+	left=3cm,
+	right=2cm,
+	top=2cm,
+	bottom=4cm
+}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{lmodern}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[final,nopatch=footnote]{microtype}
+\usepackage{blindtext}
+\usepackage{etoolbox}
+\usepackage[pdfborderstyle={/S/U/W 1},hidelinks]{hyperref}
+\usepackage{csquotes}
+\usepackage{textcomp}
+\usepackage{acronym}
+
+\usepackage[onehalfspacing]{setspace}
+\usepackage[
+    backend=biber,
+    style=numeric,
+    %style=ieee,
+    sorting=none,
+  ]{biblatex}
+\addbibresource{Literatur.bib}
+
+\usepackage{tabularx}
+\usepackage[export]{adjustbox}
+\usepackage{blindtext}
+\usepackage{epsfig}
+\usepackage{longtable}
+\usepackage{dcolumn}
+\usepackage{here}
+\usepackage{floatflt}
+\usepackage{dsfont}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[table, svgnames]{xcolor}
+\usepackage{listings}
+\usepackage{lipsum}
+\usepackage{svg}
+\usepackage{pdfpages}
+\usepackage{lscape}
+\usepackage{longtable}
+\usepackage{hhline,booktabs}
+\usepackage{enumitem}
+\usepackage{rotating}
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{eurosym}
+
+\usepackage[firstpage]{draftwatermark}
+\SetWatermarkText{ENTWURF}
+\SetWatermarkScale{1}
+
+%JSON-Listing
+\usepackage{listings}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{EEEEEE}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+
+\usepackage{diagbox}
+
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=8pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+}
+
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\renewcommand{\lstlistingname}{Auflistung}
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
+}
+
+\lstdefinelanguage{XML}
+{
+  morestring=[b]",
+  morestring=[s]{>}{<},
+  morecomment=[s]{<?}{?>},
+  stringstyle=\color{black},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  frame=single
+  morekeywords={xmlns,version,type,encoding,opcua-servers,server,server_app_uri,client_app_uri,alias,security,policy,mode,server_certificate,client_certificate,client_private_key,nodes,node,DisplayName,NamespaceIndex,IdentifierType,Identifier,datatype,description,modbus-servers,server,ipaddr,port,serveralias,endpoints,endpoint,name,function,address,quantity,offset,type}% list your attributes here
+}
+
+
+\makeatletter
+%\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-4\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{%
+            \node[shape=circle,fill=green!80,draw,inner sep=2pt] (char) {#1};}}
+\usepackage{enumitem}
+
+\setlength{\parindent}{0em}
+
+\newsavebox{\savefig}

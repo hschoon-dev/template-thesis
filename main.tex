@@ -1,0 +1,56 @@
+\documentclass[12pt, a4paper, oneside, ngerman]{article}
+
+\include{pakets}
+
+
+\usepackage{pdfpages}
+\setlength\parindent{0pt}
+
+\linespread{1.5}
+%\acsetup{first-style=short}    % package acro
+\newcounter{SeitenzahlSpeicher}
+
+\begin{document}
+
+
+%%%%%%%%%%Titelseite%%%%%%%%%%Titelseite%%%%%%%%%%
+\include{Kapitel/00_Titelseite}
+%%%%%%%%%%Abstract%%%%%%%%%%Abstract%%%%%%%%%%
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
+\include{Kapitel/01_Abstract}
+\paragraph{}$~~$\\
+
+\begin{chapquote}{Ken Blanchard, \textit{amerikanischer Autor}}
+{\Large``None of us is as smart as all of us.''}
+\end{chapquote}
+
+\section*{Danksagung}
+\lipsum[1]
+
+
+\newpage
+%%%%%%%%Verzeichnisse%%%%%%%%Verzeichnisse%%%%%%%%
+\include{Kapitel/02_Verzeichnisse}
+%%%%%%%%Inhalt%%%%%%%%%%%%%%%%%%%Inhalt%%%%%%%%%%%
+\include{Kapitel/03_Einleitung}
+\include{Kapitel/04_StateOfTheArt}
+\include{Kapitel/05_Anforderungen}
+\include{Kapitel/06_Entwicklung}
+\include{Kapitel/07_Evaluierung}
+\include{Kapitel/08_Zusammenfassung}
+\include{Kapitel/09_Outlook}
+
+
+
+%%%%%%%%Literaturverzeichnis%%%%%Literaturverzeichnis%%%%%%%%
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+\printbibliography[heading=bibintoc]
+\newpage
+\clearpage
+
+\include{Kapitel/10_Anhang}
+
+\end{document}
